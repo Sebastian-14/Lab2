@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activities.DetailPublicationActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/pictureImage"
+                android:layout_width="128dp"
+                android:layout_margin="10dp"
+                android:layout_height="128dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentEnd="true"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/fullname_text"
+                android:layout_toStartOf="@id/pictureImage"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Compañia 1" />
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_toStartOf="@id/pictureImage"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/fullname_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="dirección"/>
+
+            <TextView
+                android:id="@+id/phone_text"
+                android:layout_toStartOf="@id/pictureImage"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/address_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="telf"/>
+
+            <TextView
+                android:id="@+id/url_text"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_text"
+                android:layout_toStartOf="@id/pictureImage"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="url" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/url_text"
+                android:layout_toStartOf="@id/pictureImage"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                tools:text="email" />
+
+            <TextView
+            android:id="@+id/category_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_text"
+            android:layout_toStartOf="@id/pictureImage"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            tools:text="categoria" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/card1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/text_title_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:layout_marginBottom="10dp"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:id="@+id/text_info"
+                android:layout_below="@id/text_title_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:text="informacion acerca de la compañia"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        >
+        <Button
+            android:id="@+id/button_web"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_web"
+            />
+
+        <Button
+            android:id="@+id/call_button"
+            android:layout_toEndOf="@id/button_web"
+            android:layout_marginRight="30dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_call"/>
+
+        <Button
+            android:id="@+id/button_msg"
+            android:layout_toEndOf="@id/call_button"
+            android:layout_marginRight="30dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_mail"/>
+        <Button
+            android:id="@+id/button_msm"
+            android:layout_toEndOf="@id/button_msg"
+            android:layout_marginRight="30dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_sms"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
